@@ -1,30 +1,38 @@
 name: hwe
 channels:
-  - defaults
   - conda-forge
   - pytorch
-  - pip
+  - defaults
+
 dependencies:
-  - python=3.9.0
-  - mkl < 2022
-  - pandas
+  - python=3.8
+
+  # Core scientific stack
   - numpy=1.23.5
-  - tqdm
-  - pytorch
-  - jupyterlab
-  - yfinance
-  - matplotlib
-  - openpyxl
-  - ipywidgets
-  - cvxopt
-  - statsmodels
-  - cvxpy
-  - seaborn
-  - tensorflow
-  - scikit-learn
+  - pandas
   - scipy
-  - pip
+  - scikit-learn
   - numba
+
+  # Visualization / notebooks
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - ipywidgets
+  - tqdm
+  - openpyxl
+
+  # ML / Optimization
+  - pytorch
+  - tensorflow
+  - cvxopt
+  - cvxpy
   - osqp
+  - statsmodels
+
+  # pip bridge
+  - pip
+
+  # pip-only dependencies
   - pip:
-    - git+https://github.com/dcuoliveira/nphc
+      - git+https://github.com/dcuoliveira/nphc
